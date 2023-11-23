@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* flex-direction: column; */
+  }
+
+  #main {
+    height: 100%;
+    width: 100%;
+    background-color: WHITE;
+    /* overflow: hidden; */
+    /* position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+
+
+  }
+
+  #page1 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url("https://i.postimg.cc/cLPgwtVk/bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  h3 {
+
+    font-weight: 700;
+    font-size: 70px;
+
+    left: 330px;
+    top: 190px;
+    position: absolute;
+    color: #FFF;
+
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 70px;
+    position: absolute;
+    left: 480px;
+    top: 280px;
+
+    color: #FFF;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 90px;
+    position: absolute;
+    left: 430px;
+    top: 367px;
+
+    color: #FFF;
+  }
+
+  #page2 {
+    height: 250px;
+    width: 100%;
+    position: relative;
+
+  }
+
+  .textp1 {
+    top: 50px;
+    font-size: 55px;
+    color: rgba(55, 59, 67, 255);
+    left: 280px;
+  }
+
+  .textp2 {
+    color: rgba(55, 59, 67, 255);
+    left: 150px;
+    top: 120px;
+    font-size: 55px;
+  }
+
+  .textp2::after {
+    content: "";
+    height: 10px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 530px;
+    bottom: -30px;
+    position: absolute;
+    background-color: rgba(208, 9, 56, 255);
+    /* border: 2px solid red; */
+    border-radius: 25px;
+  }
+
+  .container{
+    height: 450px;
+    width: 100%;
+    position: relative;
+    /* margin-left: 30px;
+        right:30px; */
+        background-color: rgba(73, 73, 73, 255);
+        border-radius: 15px;
+        justify-content: space-around;
+
+  }
+  /* .container{
+    height: 100vh;
+    display: flex;
+    width: 300px;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: yellow;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+} */
+.circular-progress{
+    position: relative;
+    top: 50px;
+    left: 150px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* background: conic-gradient(#e86d2a 3.6deg, #ededed 0deg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-color:#fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    /* color: #7d2ae8; */
+}
+.text{
+  position: absolute;
+    font-size: 30px;
+    font-weight: 500;
+    color:#fff;
+    bottom: 35px;
+    left: 90px;
+    width: 350px;
+    height: 150px;
+    /* display: flex; */
+    overflow: hidden;
+    /* text-align: start; */
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.circular-progress2{
+    position: relative;
+    top: -150px;
+    left: 600px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* background: conic-gradient(#e86d2a 3.6deg, #ededed 0deg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress2::before{
+    content: "";
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-color:#fff;
+}
+.progress-value2{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    /* color: #7d2ae8; */
+}
+.text2{
+  position: absolute;
+    font-size: 30px;
+    font-weight: 500;
+    color:#fff;
+    bottom: 35px;
+    left: 530px;
+    width: 370px;
+    height: 150px;
+    /* display: flex; */
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+}
+.circular-progress3{
+    position: absolute;
+    top: 50px;
+    /* left: 999px; */
+    right: 180px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* background: conic-gradient(#e86d2a 3.6deg, #ededed 0deg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress3::before{
+    content: "";
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-color:#fff;
+}
+.progress-value3{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    /* color: #7d2ae8; */
+}
+.text3{
+  position: absolute;
+    font-size: 30px;
+    font-weight: 500;
+    color:#fff;
+    bottom: 45px;
+    right: 90px;
+    width: 350px;
+    height: 140px;
+    /* display: flex; */
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+  
+
+  #context {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  #context h3 {
+    color: rgba(55, 59, 67, 255);
+    position: absolute;
+    left: 240px;
+    top: 30px;
+  }
+
+  #context h2 {
+    color: rgba(55, 59, 67, 255);
+    position: absolute;
+    left: 390px;
+    font-size: 70px;
+    top: 110px;
+  }
+
+  #context h2::after {
+    content: "";
+    height: 10px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 290px;
+    bottom: -20px;
+    position: absolute;
+    background-color: rgba(208, 9, 56, 255);
+    /* border: 2px solid red; */
+    border-radius: 25px;
+  }
+
+  #page3 {
+    height: 85%;
+    width: 100%;
+    background-color: rgba(73, 73, 73, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  #table {
+    height: 600px;
+    width: 60%;
+    background-color: #FFF;
+    position: absolute;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -40px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  }
+
+  #table>img {
+
+    margin-top: 140px;
+    left: -50px;
+    position: absolute;
+  }
+
+  #table table {
+    text-align: center;
+    height: 380px;
+    width: 70%;
+    position: absolute;
+    right: 85px;
+    top: 10px;
+  }
+
+  th {
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: 800;
+
+  }
+
+  th::after {
+    content: "";
+
+    height: 2px;
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* left: 290px; */
+    top: 60px;
+    right: -40px;
+    /* bottom: 20px; */
+    position: absolute;
+    background-color: rgba(208, 9, 56, 255);
+    /* border: 2px solid red; */
+    border-radius: 25px;
+
+  }
+
+  p {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -150px;
+    right: 150px;
+    text-align: justify;
+
+    position: absolute;
+  }
+
+  p::after {
+    content: "";
+
+    height: 2px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 250px;
+    left: -28px;
+    position: absolute;
+    background-color: rgba(208, 9, 56, 255);
+    /* border: 2px solid red; */
+    border-radius: 25px;
+  }
+
+  button {
+    height: 50px;
+    width: 150px;
+    font-weight: 900;
+    background-color: rgba(208, 9, 56, 255);
+    position: absolute;
+    bottom: 20px;
+    right: 90px;
+    border: 1px solid rgba(208, 9, 56, 255);
+    border-radius: 30px;
+    color: #FFF;
+
+  }
+
+  #h1text {
+    height: 250px;
+    width: 90%;
+    top: -15px;
+    background-color: rgba(208, 9, 56, 255);
+    color: black;
+    position: relative;
+    border-radius: 20px;
+    margin: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  }
+
+  #h1text>h1 {
+    top: 38px;
+    position: absolute;
+    /* height: 400px;   */
+    font-size: 55px;
+    left: 20px;
+    text-align: center;
+    margin: 12px 18px;
+
+    /* position: absolute; */
+
+  }
+
+  #page4 {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+    overflow: hidden;
+    background-image: url("https://i.postimg.cc/5yjpjCc9/bg-2-new.jpg");
+    background-size: cover;
+    background-position-y: -100px;
+    background-position-x: 130px;
+    background-repeat: no-repeat;
+
+    /* overflow: scroll; */
+  }
+
+  /* #page4 img{
+     position: absolute;
+     object-fit:cover;
+     margin-top: 90px;
+     margin-right:-90px;
+     width: 100%;
+     height: 100%;
+  } */
+  #page4>h3 {
+    width: 790px;
+    /* height: 100px; */
+    font-size: 55px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    left: 80px;
+    top: 20px;
+    color: #000;
+  }
+
+  #page4 h3::after {
+    content: "";
+    height: 10px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 290px;
+    bottom: -20px;
+    position: absolute;
+    background-color: rgba(208, 9, 56, 255);
+    /* border: 2px solid red; */
+    border-radius: 25px;
+
+  }
+
+  ul {
+    height: 200px;
+    width: 10%;
+
+  }
+
+  li {
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: -570px;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    text-align: center;
+  }
+
+  #btn {
+    width: 350px;
+    height: 60px;
+    font-size: 15px;
+    position: absolute;
+    left: 50px;
+    bottom: 120px;
+  }
+  #footer{
+    top: -30px;
+    height: 280px;
+    width: 90%;
+    border-radius: 25px;
+    position:relative;
+    margin-left: 80px;
+    background-color: rgba(73, 73, 73, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #FFF; */
+ 
+  }
+  #footer h3{
+    font-size: 55px;
+    top: 50px;
+    left: 15px;
+    text-align: center;
+   
+  }
+  #footer button{
+    position: absolute;
+     width: 200px;
+     right: 600px;
+     font-weight: 300;
+     font-size:30px;
+
+     
+  }
+  
+  </style>
+
+<body>
+  <div id="main">
+    <div id="page1">
+
+      <h3>Contractor stay Top of Mind </h3>
+      <h2>in your Community</h2>
+      <h1>With A BillBoard</h1>
+
+    </div>
+    <div id="page2">
+      <h3 class="textp1">Some Statistics On Why BillBoards</h3>
+      <h3 class="textp2">Are An Excellent Way to Reach Potential Clients</h3>
+
+
+    </div>
+    <div class="container">
+      <div class="circular-progress" data-tilt data-tilt-scale="1.1">
+          <span class="progress-value">0%</span>
+      </div>
+
+      <span class="text">of Driver notice BillBoard while driving locally around town</span>
+
+      <div class="circular-progress2" data-tilt data-tilt-scale="1.2">
+        <span class="progress-value2">0%</span>
+    </div>
+
+    <span class="text2">of Consumer are driving on highway several times each week</span>
+
+    <div class="circular-progress3" data-tilt data-tilt-scale="1.1">
+      <span class="progress-value3">0%</span>
+  </div>
+
+  <span class="text3">of Consumer are actively trying to get outside as much as possible and take a break from their mobile device</span>
+  </div>
+
+    <div id="context">
+      <h3>Choose The Right Size BillBoard</h3>
+      <h2>For Your Local Market</h2>
+    </div>
+
+    <div id="page3" >
+      <div id="table">
+        <img src="https://i.postimg.cc/0yZ6XHM3/img-1.png" alt="" data-tilt data-tilt-glare>
+
+        <table>
+          <tr>
+            <th> activity list </th>
+            <th class="co"> cost</th>
+          </tr>
+          <tr>
+            <td> Lorem ipsum dolor sit amet.</td>
+            <td> $6965665</td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum dolor sit amet.</td>
+            <td> $6965665</td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum dolor sit amet.</td>
+            <td> $6965665</td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum dolor sit amet.</td>
+            <td> $6965665</td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum dolor sit amet.</td>
+            <td> $6965665</td>
+          </tr>
+        </table>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur placeat voluptatibus culpa ex saepe
+          laudantium sequi itaque provident nemo?</p>
+        <button type="sumbit" >BUY NOW</button>
+
+
+      </div>
+
+    </div>
+    <div id="h1text">
+      <h1 data-tilt data-tilt-scale="1">Oh Yes We Guarantee Your Satisfaction With A No Questions Asked Rolling 30 Days Money Back Guarantee On Our
+        Outdoor/Billboard Ads</h1>
+    </div>
+
+    <div id="page4">
+      <h3 data-tilt > Why Choose Us For Your Traditional Marketing Needs?</h3>
+      <div id="list">
+        <ul>
+          <li>JobProgress is built for contractors by
+            contractors</li>
+          <li>Over 2000 contractor Companies use our
+            advanced business management software
+            daily</li>
+          <li>We've come a long way together with our
+            contractor partners over the last 6 years</li>
+          <li>Deep business learnings with our
+            contractor partners make us your go to
+            marketing partner</li>
+          <button id="btn" type="submit"> Choose your Billboard Ad Today</button>
+        </ul>
+      </div>
+      
+    </div>
+    <div id="footer">
+      <h3 data-tilt data-tilt-scale="1">Got Questions? Contact Us To Schedule
+        A Meeting With Our Traditional Marketing Experts</h3>
+        <button type="button">Contact US</button>
+    </div>
+     
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+  integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+  crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+    let circularProgress = document.querySelector(".circular-progress"),
+progressValue = document.querySelector(".progress-value");
+
+let progressStartValue = 0,    
+progressEndValue = 82,    
+speed = 60;
+
+let progress = setInterval(() => {
+progressStartValue++;
+
+progressValue.textContent = `${progressStartValue}%`
+circularProgress.style.background = `conic-gradient(#d00938 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+
+if(progressStartValue == progressEndValue){
+clearInterval(progress);
+}    
+},speed);
+   
+
+
+let circularProgress_2 = document.querySelector(".circular-progress2"),
+progressValue_2 = document.querySelector(".progress-value2");
+
+let progressStartValue_2 = 0,    
+progressEndValue_2 = 70,    
+speed2= 60;
+
+let progress2 = setInterval(() => {
+progressStartValue_2 ++;
+
+progressValue_2.textContent = `${progressStartValue_2}%`
+circularProgress_2.style.background = `conic-gradient(#d00938 ${progressStartValue_2 * 3.6}deg, #ededed 0deg)`
+
+if(progressStartValue_2 == progressEndValue_2){
+clearInterval(progress2);
+}    
+},speed2);
+
+let circularProgress_3 = document.querySelector(".circular-progress3"),
+progressValue_3 = document.querySelector(".progress-value3");
+
+let progressStartValue_3 = 0,    
+progressEndValue_3 = 72,    
+speed3= 50;
+
+let progress3 = setInterval(() => {
+progressStartValue_3 ++;
+
+progressValue_3.textContent = `${progressStartValue_3}%`
+circularProgress_3.style.background = `conic-gradient(#d00938 ${progressStartValue_3 * 3.6}deg, #ededed 0deg)`
+
+if(progressStartValue_3 == progressEndValue_3){
+clearInterval(progress3);
+}    
+},speed3);
+   
+
+var VanillaTilt = (function () {
+'use strict';
+
+/**
+ * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
+ * Original idea: https://github.com/gijsroge/tilt.js
+ * MIT License.
+ * Version 1.8.1
+ */
+
+class VanillaTilt {
+  constructor(element, settings = {}) {
+    if (!(element instanceof Node)) {
+      throw ("Can't initialize VanillaTilt because " + element + " is not a Node.");
+    }
+
+    this.width = null;
+    this.height = null;
+    this.clientWidth = null;
+    this.clientHeight = null;
+    this.left = null;
+    this.top = null;
+
+    // for Gyroscope sampling
+    this.gammazero = null;
+    this.betazero = null;
+    this.lastgammazero = null;
+    this.lastbetazero = null;
+
+    this.transitionTimeout = null;
+    this.updateCall = null;
+    this.event = null;
+
+    this.updateBind = this.update.bind(this);
+    this.resetBind = this.reset.bind(this);
+
+    this.element = element;
+    this.settings = this.extendSettings(settings);
+
+    this.reverse = this.settings.reverse ? -1 : 1;
+    this.resetToStart = VanillaTilt.isSettingTrue(this.settings["reset-to-start"]);
+    this.glare = VanillaTilt.isSettingTrue(this.settings.glare);
+    this.glarePrerender = VanillaTilt.isSettingTrue(this.settings["glare-prerender"]);
+    this.fullPageListening = VanillaTilt.isSettingTrue(this.settings["full-page-listening"]);
+    this.gyroscope = VanillaTilt.isSettingTrue(this.settings.gyroscope);
+    this.gyroscopeSamples = this.settings.gyroscopeSamples;
+
+    this.elementListener = this.getElementListener();
+
+    if (this.glare) {
+      this.prepareGlare();
+    }
+
+    if (this.fullPageListening) {
+      this.updateClientSize();
+    }
+
+    this.addEventListeners();
+    this.reset();
+
+    if (this.resetToStart === false) {
+      this.settings.startX = 0;
+      this.settings.startY = 0;
+    }
+  }
+
+  static isSettingTrue(setting) {
+    return setting === "" || setting === true || setting === 1;
+  }
+
+  /**
+   * Method returns element what will be listen mouse events
+   * @return {Node}
+   */
+  getElementListener() {
+    if (this.fullPageListening) {
+      return window.document;
+    }
+
+    if (typeof this.settings["mouse-event-element"] === "string") {
+      const mouseEventElement = document.querySelector(this.settings["mouse-event-element"]);
+
+      if (mouseEventElement) {
+        return mouseEventElement;
+      }
+    }
+
+    if (this.settings["mouse-event-element"] instanceof Node) {
+      return this.settings["mouse-event-element"];
+    }
+
+    return this.element;
+  }
+
+  /**
+   * Method set listen methods for this.elementListener
+   * @return {Node}
+   */
+  addEventListeners() {
+    this.onMouseEnterBind = this.onMouseEnter.bind(this);
+    this.onMouseMoveBind = this.onMouseMove.bind(this);
+    this.onMouseLeaveBind = this.onMouseLeave.bind(this);
+    this.onWindowResizeBind = this.onWindowResize.bind(this);
+    this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
+
+    this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
+    this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
+    this.elementListener.addEventListener("mousemove", this.onMouseMoveBind);
+
+    if (this.glare || this.fullPageListening) {
+      window.addEventListener("resize", this.onWindowResizeBind);
+    }
+
+    if (this.gyroscope) {
+      window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
+    }
+  }
+
+  /**
+   * Method remove event listeners from current this.elementListener
+   */
+  removeEventListeners() {
+    this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind);
+    this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind);
+    this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind);
+
+    if (this.gyroscope) {
+      window.removeEventListener("deviceorientation", this.onDeviceOrientationBind);
+    }
+
+    if (this.glare || this.fullPageListening) {
+      window.removeEventListener("resize", this.onWindowResizeBind);
+    }
+  }
+
+  destroy() {
+    clearTimeout(this.transitionTimeout);
+    if (this.updateCall !== null) {
+      cancelAnimationFrame(this.updateCall);
+    }
+
+    this.element.style.willChange = "";
+    this.element.style.transition = "";
+    this.element.style.transform = "";
+    this.resetGlare();
+
+    this.removeEventListeners();
+    this.element.vanillaTilt = null;
+    delete this.element.vanillaTilt;
+
+    this.element = null;
+  }
+
+  onDeviceOrientation(event) {
+    if (event.gamma === null || event.beta === null) {
+      return;
+    }
+
+    this.updateElementPosition();
+
+    if (this.gyroscopeSamples > 0) {
+      this.lastgammazero = this.gammazero;
+      this.lastbetazero = this.betazero;
+
+      if (this.gammazero === null) {
+        this.gammazero = event.gamma;
+        this.betazero = event.beta;
+      } else {
+        this.gammazero = (event.gamma + this.lastgammazero) / 2;
+        this.betazero = (event.beta + this.lastbetazero) / 2;
+      }
+
+      this.gyroscopeSamples -= 1;
+    }
+
+    const totalAngleX = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX;
+    const totalAngleY = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY;
+
+    const degreesPerPixelX = totalAngleX / this.width;
+    const degreesPerPixelY = totalAngleY / this.height;
+
+    const angleX = event.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero);
+    const angleY = event.beta - (this.settings.gyroscopeMinAngleY + this.betazero);
+
+    const posX = angleX / degreesPerPixelX;
+    const posY = angleY / degreesPerPixelY;
+
+    if (this.updateCall !== null) {
+      cancelAnimationFrame(this.updateCall);
+    }
+
+    this.event = {
+      clientX: posX + this.left,
+      clientY: posY + this.top,
+    };
+
+    this.updateCall = requestAnimationFrame(this.updateBind);
+  }
+
+  onMouseEnter() {
+    this.updateElementPosition();
+    this.element.style.willChange = "transform";
+    this.setTransition();
+  }
+
+  onMouseMove(event) {
+    if (this.updateCall !== null) {
+      cancelAnimationFrame(this.updateCall);
+    }
+
+    this.event = event;
+    this.updateCall = requestAnimationFrame(this.updateBind);
+  }
+
+  onMouseLeave() {
+    this.setTransition();
+
+    if (this.settings.reset) {
+      requestAnimationFrame(this.resetBind);
+    }
+  }
+
+  reset() {
+    this.onMouseEnter();
+
+    if (this.fullPageListening) {
+      this.event = {
+        clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth,
+        clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight
+      };
+    } else {
+      this.event = {
+        clientX: this.left + ((this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width),
+        clientY: this.top + ((this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height)
+      };
+    }
+
+    let backupScale = this.settings.scale;
+    this.settings.scale = 1;
+    this.update();
+    this.settings.scale = backupScale;
+    this.resetGlare();
+  }
+
+  resetGlare() {
+    if (this.glare) {
+      this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)";
+      this.glareElement.style.opacity = "0";
+    }
+  }
+
+  getValues() {
+    let x, y;
+
+    if (this.fullPageListening) {
+      x = this.event.clientX / this.clientWidth;
+      y = this.event.clientY / this.clientHeight;
+    } else {
+      x = (this.event.clientX - this.left) / this.width;
+      y = (this.event.clientY - this.top) / this.height;
+    }
+
+    x = Math.min(Math.max(x, 0), 1);
+    y = Math.min(Math.max(y, 0), 1);
+
+    let tiltX = (this.reverse * (this.settings.max - x * this.settings.max * 2)).toFixed(2);
+    let tiltY = (this.reverse * (y * this.settings.max * 2 - this.settings.max)).toFixed(2);
+    let angle = Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+
+    return {
+      tiltX: tiltX,
+      tiltY: tiltY,
+      percentageX: x * 100,
+      percentageY: y * 100,
+      angle: angle
+    };
+  }
+
+  updateElementPosition() {
+    let rect = this.element.getBoundingClientRect();
+
+    this.width = this.element.offsetWidth;
+    this.height = this.element.offsetHeight;
+    this.left = rect.left;
+    this.top = rect.top;
+  }
+
+  update() {
+    let values = this.getValues();
+
+    this.element.style.transform = "perspective(" + this.settings.perspective + "px) " +
+      "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " +
+      "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " +
+      "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
+
+    if (this.glare) {
+      this.glareElement.style.transform = `rotate(${values.angle}deg) translate(-50%, -50%)`;
+      this.glareElement.style.opacity = `${values.percentageY * this.settings["max-glare"] / 100}`;
+    }
+
+    this.element.dispatchEvent(new CustomEvent("tiltChange", {
+      "detail": values
+    }));
+
+    this.updateCall = null;
+  }
+
+  /**
+   * Appends the glare element (if glarePrerender equals false)
+   * and sets the default style
+   */
+  prepareGlare() {
+    // If option pre-render is enabled we assume all html/css is present for an optimal glare effect.
+    if (!this.glarePrerender) {
+      // Create glare element
+      const jsTiltGlare = document.createElement("div");
+      jsTiltGlare.classList.add("js-tilt-glare");
+
+      const jsTiltGlareInner = document.createElement("div");
+      jsTiltGlareInner.classList.add("js-tilt-glare-inner");
+
+      jsTiltGlare.appendChild(jsTiltGlareInner);
+      this.element.appendChild(jsTiltGlare);
+    }
+
+    this.glareElementWrapper = this.element.querySelector(".js-tilt-glare");
+    this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
+
+    if (this.glarePrerender) {
+      return;
+    }
+
+    Object.assign(this.glareElementWrapper.style, {
+      "position": "absolute",
+      "top": "0",
+      "left": "0",
+      "width": "100%",
+      "height": "100%",
+      "overflow": "hidden",
+      "pointer-events": "none",
+      "border-radius": "inherit"
+    });
+
+    Object.assign(this.glareElement.style, {
+      "position": "absolute",
+      "top": "50%",
+      "left": "50%",
+      "pointer-events": "none",
+      "background-image": `linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)`,
+      "transform": "rotate(180deg) translate(-50%, -50%)",
+      "transform-origin": "0% 0%",
+      "opacity": "0"
+    });
+
+    this.updateGlareSize();
+  }
+
+  updateGlareSize() {
+    if (this.glare) {
+      const glareSize = (this.element.offsetWidth > this.element.offsetHeight ? this.element.offsetWidth : this.element.offsetHeight) * 2;
+
+      Object.assign(this.glareElement.style, {
+        "width": `${glareSize}px`,
+        "height": `${glareSize}px`,
+      });
+    }
+  }
+
+  updateClientSize() {
+    this.clientWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+    this.clientHeight = window.innerHeight
+      || document.documentElement.clientHeight
+      || document.body.clientHeight;
+  }
+
+  onWindowResize() {
+    this.updateGlareSize();
+    this.updateClientSize();
+  }
+
+  setTransition() {
+    clearTimeout(this.transitionTimeout);
+    this.element.style.transition = this.settings.speed + "ms " + this.settings.easing;
+    if (this.glare) this.glareElement.style.transition = `opacity ${this.settings.speed}ms ${this.settings.easing}`;
+
+    this.transitionTimeout = setTimeout(() => {
+      this.element.style.transition = "";
+      if (this.glare) {
+        this.glareElement.style.transition = "";
+      }
+    }, this.settings.speed);
+
+  }
+
+  
+  extendSettings(settings) {
+    let defaultSettings = {
+      reverse: false,
+      max: 15,
+      startX: 0,
+      startY: 0,
+      perspective: 1000,
+      easing: "cubic-bezier(.03,.98,.52,.99)",
+      scale: 1,
+      speed: 300,
+      transition: true,
+      axis: null,
+      glare: false,
+      "max-glare": 1,
+      "glare-prerender": false,
+      "full-page-listening": false,
+      "mouse-event-element": null,
+      reset: true,
+      "reset-to-start": true,
+      gyroscope: true,
+      gyroscopeMinAngleX: -45,
+      gyroscopeMaxAngleX: 45,
+      gyroscopeMinAngleY: -45,
+      gyroscopeMaxAngleY: 45,
+      gyroscopeSamples: 10
+    };
+
+    let newSettings = {};
+    for (var property in defaultSettings) {
+      if (property in settings) {
+        newSettings[property] = settings[property];
+      } else if (this.element.hasAttribute("data-tilt-" + property)) {
+        let attribute = this.element.getAttribute("data-tilt-" + property);
+        try {
+          newSettings[property] = JSON.parse(attribute);
+        } catch (e) {
+          newSettings[property] = attribute;
+        }
+
+      } else {
+        newSettings[property] = defaultSettings[property];
+      }
+    }
+
+    return newSettings;
+  }
+
+  static init(elements, settings) {
+    if (elements instanceof Node) {
+      elements = [elements];
+    }
+
+    if (elements instanceof NodeList) {
+      elements = [].slice.call(elements);
+    }
+
+    if (!(elements instanceof Array)) {
+      return;
+    }
+
+    elements.forEach((element) => {
+      if (!("vanillaTilt" in element)) {
+        element.vanillaTilt = new VanillaTilt(element, settings);
+      }
+    });
+  }
+}
+
+if (typeof document !== "undefined") {
+  /* expose the class to window */
+  window.VanillaTilt = VanillaTilt;
+
+  /**
+   * Auto load
+   */
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+}
+
+return VanillaTilt;
+
+}());
+// gsap.from(".circular-progress", {
+//             delay: 1,
+//             opacity: 0,
+//             duration: 2.5,
+//             y: -30
+//         })
+//         gsap.from(".circular-progress2", {
+//             delay: 1.2,
+//             opacity: 0,
+//             duration: 2.5,
+//             y: -30
+//         })
+//         gsap.from(".circular-progress3", {
+//             delay: 1.2,
+//             opacity: 0,
+//             duration: 2.5,
+//             y: -30
+//         })
+
+// gsap.from(".ciruclar-progress ", {
+//             y: 20,
+//             scrollTrigger: {
+//                 trigger: ".container",
+//                 scroller: "body",
+//                   markers:true,
+//                 start: "top 45%",
+//                 end: "top 55%",
+//                 scrub: 2
+//             }
+
+//         })
+
+gsap.from(".circular-progress ,.circular-progress2,.circular-progress3", {
+            y: -50,
+            // x: 70,
+            scrollTrigger: {
+              // delay:1,
+                trigger: ".container",
+                scroller: "body",
+                //   markers:true
+                start: "top 55%",
+                end: "top 45%",
+                scrub: 4
+            }
+
+        })
+
+  </script>
+</body>
+
+</html>
